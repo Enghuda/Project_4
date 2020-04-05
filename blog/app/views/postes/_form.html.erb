@@ -5,7 +5,10 @@ Name :
 <p>
 <p>
 Description : 
-<%= f.text_field :description%>
+<%= f.text_area :description%>
+<p>
+<%= f.label 'Photo'%>
+<%= f.file_field :img%>
 <p>
 <%= f.submit %>
 <% end %>

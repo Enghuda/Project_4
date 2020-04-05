@@ -3856,3 +3856,711 @@ Processing by PostesController#new as HTML
 Completed 200 OK in 78ms (Views: 75.8ms | ActiveRecord: 0.2ms)
 
 
+Started POST "/postes" for ::1 at 2020-04-05 21:19:59 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wzzhma6SjJgo4vdmWakbAv2dcZHc99wYuHi2GCnHIqmCL1JpB0nb1n/uNSohzq+KKT1NgSV0wzxAFyvSdcKG2w==", "poste"=>{"name"=>"Versace Pour Homme", "description"=>"Aromatic fragrance for the man who is knowledgeable and confident in himself, and has the ability to live in harmony with the natural world, thanks to the personality of his strong and emotional components of the mixture of lemon, sage, and tonka."}, "commit"=>"Create Poste"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (122.9ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Versace Pour Homme"], ["description", "Aromatic fragrance for the man who is knowledgeable and confident in himself, and has the ability to live in harmony with the natural world, thanks to the personality of his strong and emotional components of the mixture of lemon, sage, and tonka."], ["created_at", "2020-04-05 18:19:59.693926"], ["updated_at", "2020-04-05 18:19:59.693926"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (732.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+Redirected to http://localhost:3000/postes/7
+Completed 302 Found in 883ms (ActiveRecord: 856.0ms)
+
+
+Started GET "/postes/7" for ::1 at 2020-04-05 21:20:00 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 389ms (Views: 376.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 21:20:11 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 90ms (Views: 87.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 21:20:13 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 77ms (Views: 74.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/postes/5" for ::1 at 2020-04-05 21:20:17 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 80ms (Views: 77.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/postes/5" for ::1 at 2020-04-05 21:20:20 +0300
+Processing by PostesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7ViyYcMWQ7wHyRz0S0SpX57uxy4nNg/O34+4GOLyTOCsSwGRas0U8lDF3rgzIx3XSk77Pt61EOon4CXSvvfokg==", "id"=>"5"}
+  [1m[36mPoste Load (0.8ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:29
+  [1m[36mPoste Destroy (1.4ms)[0m  [1m[31mDELETE FROM "postes" WHERE "postes"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/postes_controller.rb:29
+  [1m[35m (563.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:29
+Redirected to http://localhost:3000/
+Completed 302 Found in 569ms (ActiveRecord: 565.5ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 21:20:21 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 98ms (Views: 95.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 21:20:24 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 75ms (Views: 72.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 21:21:57 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 90ms (Views: 88.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 21:22:00 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 74ms (Views: 71.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 21:22:04 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (18.2ms)
+  Rendered postes/new.html.erb within layouts/application (19.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 109ms (Views: 106.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/postes" for ::1 at 2020-04-05 21:22:21 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iLBNOQdefBh2UD+r1uAW26UfgcbhHyfzPMwNQxuP0VLJo/7JroUrViFc/eeuh6JTcb+91hicONfEo5CJR4p1IA==", "poste"=>{"name"=>"Dior Fahrenheit", "description"=>"A unique and contrasting signature, with a powerful enchanting trail. Fresh Sicilian Mandarin notes, and the surprising combination of masculine Wood and Leather with an unprecedented Violet accord."}, "commit"=>"Create Poste"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (7.7ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dior Fahrenheit"], ["description", "A unique and contrasting signature, with a powerful enchanting trail. Fresh Sicilian Mandarin notes, and the surprising combination of masculine Wood and Leather with an unprecedented Violet accord."], ["created_at", "2020-04-05 18:22:21.111576"], ["updated_at", "2020-04-05 18:22:21.111576"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (847.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+Redirected to http://localhost:3000/postes/8
+Completed 302 Found in 872ms (ActiveRecord: 855.3ms)
+
+
+Started GET "/postes/8" for ::1 at 2020-04-05 21:22:22 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 76ms (Views: 74.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 21:22:28 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (1.0ms)
+  Rendered postes/new.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 92ms (Views: 89.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/postes" for ::1 at 2020-04-05 21:23:21 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HWV1ZIckfxErjwGWR2JmoclnuVbcKIJMfCwqaXK66SdcdsaULv8oX3yDw9o/BdIpHceFRiWrnWiEQ7ejLr9NVQ==", "poste"=>{"name"=>"Korloff In White Intense", "description"=>"Korloff In White Intense Perfume is an aromatic fragrance and the newest member in Korloff family. A very class, modern and awesome scent. It will last a very long day. This perfume is a perfect choice to present it to whom you love!"}, "commit"=>"Create Poste"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (68.6ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Korloff In White Intense"], ["description", "Korloff In White Intense Perfume is an aromatic fragrance and the newest member in Korloff family. A very class, modern and awesome scent. It will last a very long day. This perfume is a perfect choice to present it to whom you love!"], ["created_at", "2020-04-05 18:23:21.722299"], ["updated_at", "2020-04-05 18:23:21.722299"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (1093.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+Redirected to http://localhost:3000/postes/9
+Completed 302 Found in 1222ms (ActiveRecord: 1161.9ms)
+
+
+Started GET "/postes/9" for ::1 at 2020-04-05 21:23:22 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 21:24:12 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (1.1ms)
+  Rendered postes/new.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 96ms (Views: 93.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/postes" for ::1 at 2020-04-05 21:24:26 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4XZAFUT79uKx0EawKroLcgbPx1oAQzwdcT1j9nDw3UagZfPl7SChrObchPxS3b/60m/7SvnAIzmJUv48LPV5NA==", "poste"=>{"name"=>"Chanel Coco Mademoiselle EDP", "description"=>"A wonderful feminine fragrance full of freedom and vitality and gives you amazing excitement and charm, with a fantastic mixture of mandarin, patchouli and vetiver."}, "commit"=>"Create Poste"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (148.3ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chanel Coco Mademoiselle EDP"], ["description", "A wonderful feminine fragrance full of freedom and vitality and gives you amazing excitement and charm, with a fantastic mixture of mandarin, patchouli and vetiver."], ["created_at", "2020-04-05 18:24:26.883144"], ["updated_at", "2020-04-05 18:24:26.883144"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (1119.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+Redirected to http://localhost:3000/postes/10
+Completed 302 Found in 1284ms (ActiveRecord: 1267.9ms)
+
+
+Started GET "/postes/10" for ::1 at 2020-04-05 21:24:28 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 80ms (Views: 77.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 21:24:44 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 116ms (Views: 113.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 21:25:18 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (1.2ms)
+  Rendered postes/new.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 84ms (Views: 81.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/postes" for ::1 at 2020-04-05 21:25:33 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G3sFGVnC+zyGJUJJgkFpIgjjP4ztiT9wW1xzWXZr9gNaaLbp8BmsctEpgAX6Jt2q3EMDnBQKIFSjM+6TKm5ScQ==", "poste"=>{"name"=>"Juicy Couture Viva La Juicy", "description"=>"The Viva la Juicy girl never turns down a glass of champagne or the chance to get into the tiniest bit of trouble. Viva la Juicy combines delicious wild berries, with creamy vanilla and bright jasmine. Unfortunately products deemed unsafe to travel by air are unable to be expedited."}, "commit"=>"Create Poste"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (63.8ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Juicy Couture Viva La Juicy"], ["description", "The Viva la Juicy girl never turns down a glass of champagne or the chance to get into the tiniest bit of trouble. Viva la Juicy combines delicious wild berries, with creamy vanilla and bright jasmine. Unfortunately products deemed unsafe to travel by air are unable to be expedited."], ["created_at", "2020-04-05 18:25:33.604313"], ["updated_at", "2020-04-05 18:25:33.604313"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (1044.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+Redirected to http://localhost:3000/postes/11
+Completed 302 Found in 1125ms (ActiveRecord: 1108.2ms)
+
+
+Started GET "/postes/11" for ::1 at 2020-04-05 21:25:34 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 88ms (Views: 85.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 21:25:57 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (1.0ms)
+  Rendered postes/new.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 84ms (Views: 81.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/postes" for ::1 at 2020-04-05 21:26:25 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FK0B/kpH1OoLIGK6G6MPWOpDZZDXiG4YH5ALLR+sJqpQQf3UPJIHf8gQ8aQCTi1twkxhrrdPpyYEd3m6HsU6A==", "poste"=>{"name"=>"Elie Saab Girl Of Now Shine", "description"=>"Elie Saab Girl Of Now Shine a beautiful floral and fruity fragrance for women and the newest member of Elie Saab family. Suitable for any ocasion when you just want to smell nice and clean and it's a perfect summer breeze. Must have!"}, "commit"=>"Create Poste"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (54.6ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Elie Saab Girl Of Now Shine"], ["description", "Elie Saab Girl Of Now Shine a beautiful floral and fruity fragrance for women and the newest member of Elie Saab family. Suitable for any ocasion when you just want to smell nice and clean and it's a perfect summer breeze. Must have!"], ["created_at", "2020-04-05 18:26:25.202693"], ["updated_at", "2020-04-05 18:26:25.202693"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (1048.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+Redirected to http://localhost:3000/postes/12
+Completed 302 Found in 1119ms (ActiveRecord: 1103.2ms)
+
+
+Started GET "/postes/12" for ::1 at 2020-04-05 21:26:26 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 83ms (Views: 80.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 21:26:29 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 76ms (Views: 73.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 21:53:12 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.5ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (24.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 918ms (Views: 903.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 21:53:16 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (282.8ms)
+  Rendered postes/new.html.erb within layouts/application (288.7ms)
+Completed 500 Internal Server Error in 309ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `area' for #<ActionView::Helpers::FormBuilder:0x000000000e1d3040>):
+     5: <p>
+     6: <p>
+     7: Description : 
+     8: <%= f.area :description%>
+     9: <p>
+    10: <%= f.submit %>
+    11: <% end %>
+  
+app/views/postes/_form.html.erb:8:in `block in _app_views_postes__form_html_erb__759444314_118378320'
+app/views/postes/_form.html.erb:1:in `_app_views_postes__form_html_erb__759444314_118378320'
+app/views/postes/new.html.erb:2:in `_app_views_postes_new_html_erb__280759182_118344080'
+Started GET "/postes/new" for ::1 at 2020-04-05 21:53:39 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (60.3ms)
+  Rendered postes/new.html.erb within layouts/application (72.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 389ms (Views: 384.3ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateActiveStorageTables (20200405185910)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (7.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200405185910_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200405185910_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  ↳ db/migrate/20200405185910_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  ↳ db/migrate/20200405185910_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  ↳ db/migrate/20200405185910_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20200405185910_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200405185910"]]
+  ↳ bin/rails:4
+  [1m[35m (72.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/postes/new" for ::1 at 2020-04-05 22:09:49 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (48.4ms)
+  Rendered postes/new.html.erb within layouts/application (55.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 463ms (Views: 345.9ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/postes" for ::1 at 2020-04-05 22:10:12 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fCYLsEXm0qjkFGFIByJLbBxUKj4Tj3Guj3NPeh2HMYQ9NbhA7D2F5rMYowR/Rf/kyPQWLuoMbop3HNKwQYKV9g==", "poste"=>{"name"=>"test", "description"=>"egreferfew", "img"=>#<ActionDispatch::Http::UploadedFile:0x000000000e3e34e8 @tempfile=#<Tempfile:C:/Users/enghu/AppData/Local/Temp/RackMultipart20200405-13400-61b8rt.jpg>, @original_filename="dior.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"poste[img]\"; filename=\"dior.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Poste"}
+Unpermitted parameter: :img
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (1.8ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test"], ["description", "egreferfew"], ["created_at", "2020-04-05 19:10:13.047911"], ["updated_at", "2020-04-05 19:10:13.047911"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (534.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+Redirected to http://localhost:3000/postes/13
+Completed 302 Found in 595ms (ActiveRecord: 536.9ms)
+
+
+Started GET "/postes/13" for ::1 at 2020-04-05 22:10:13 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPoste Load (0.7ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 242ms (Views: 230.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 22:10:21 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.6ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 204ms (Views: 198.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/postes/13" for ::1 at 2020-04-05 22:10:25 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 226ms (Views: 220.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/postes/13" for ::1 at 2020-04-05 22:12:16 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPoste Load (0.5ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 335ms (Views: 308.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 22:12:22 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.5ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 237ms (Views: 231.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 22:12:24 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (3.2ms)
+  Rendered postes/new.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 213ms (Views: 207.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 22:13:56 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (3.7ms)
+  Rendered postes/new.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 277ms (Views: 250.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 22:14:01 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (3.2ms)
+  Rendered postes/new.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 244ms (Views: 240.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 22:14:03 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.5ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 207ms (Views: 201.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/postes/13" for ::1 at 2020-04-05 22:14:10 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPoste Load (0.4ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:39
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 208ms (Views: 201.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/postes/13/edit" for ::1 at 2020-04-05 22:14:13 +0300
+Processing by PostesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:39
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/postes_controller.rb:20
+Completed 422 Unprocessable Entity in 616ms (ActiveRecord: 4.1ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Blob must exist):
+  
+app/controllers/postes_controller.rb:20:in `edit'
+Started GET "/postes/13/edit" for ::1 at 2020-04-05 22:14:28 +0300
+Processing by PostesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPoste Load (0.4ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/edit.html.erb within layouts/application
+  Rendered postes/_form.html.erb (4.1ms)
+  Rendered postes/edit.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 258ms (Views: 230.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/postes/13/edit" for ::1 at 2020-04-05 22:17:43 +0300
+Processing by PostesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPoste Load (0.4ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/edit.html.erb within layouts/application
+  Rendered postes/_form.html.erb (4.1ms)
+  Rendered postes/edit.html.erb within layouts/application (9.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 229ms (Views: 222.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 22:17:50 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (3.3ms)
+  Rendered postes/new.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 259ms (Views: 253.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 22:17:53 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.6ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 201ms (Views: 195.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/postes/13" for ::1 at 2020-04-05 22:17:56 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPoste Load (0.4ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 13], ["record_type", "Poste"], ["name", "img"], ["LIMIT", 1]]
+  ↳ app/views/postes/show.html.erb:11
+  Rendered postes/show.html.erb within layouts/application (14.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 229ms (Views: 221.6ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 22:18:02 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.4ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 210ms (Views: 204.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 22:18:05 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (5.2ms)
+  Rendered postes/new.html.erb within layouts/application (13.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 298ms (Views: 290.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/postes" for ::1 at 2020-04-05 22:18:18 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qlD5tts3QuHqIX3V+QsoDIeIoV44zBaifYK9RCB0DWjrQ0pGcuwVr70tv5mBbJyEUyidTsFPCYaF7SCOfHGpGg==", "poste"=>{"name"=>"Versace Pour Homme", "description"=>"sdddd", "img"=>#<ActionDispatch::Http::UploadedFile:0x000000000f4c8498 @tempfile=#<Tempfile:C:/Users/enghu/AppData/Local/Temp/RackMultipart20200405-13400-1byek6u.jpg>, @original_filename="chanel_coco_mademoselle.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"poste[img]\"; filename=\"chanel_coco_mademoselle.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Poste"}
+[36m  Disk Storage (174.9ms) [0m[32mUploaded file to key: oZSwEKbCapFjdH8KxrMUAYTB (checksum: Oy2atjyPXAkT9gSh58YfCg==)[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:12
+  [1m[36mActiveStorage::Blob Create (1.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "oZSwEKbCapFjdH8KxrMUAYTB"], ["filename", "chanel_coco_mademoselle.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 35621], ["checksum", "Oy2atjyPXAkT9gSh58YfCg=="], ["created_at", "2020-04-05 19:18:19.405350"]]
+  ↳ app/controllers/postes_controller.rb:12
+  [1m[35m (409.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (1.8ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Versace Pour Homme"], ["description", "sdddd"], ["created_at", "2020-04-05 19:18:19.912101"], ["updated_at", "2020-04-05 19:18:19.912101"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "img"], ["record_type", "Poste"], ["record_id", 14], ["blob_id", 1], ["created_at", "2020-04-05 19:18:19.969993"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Update (0.3ms)[0m  [1m[33mUPDATE "postes" SET "updated_at" = ? WHERE "postes"."id" = ?[0m  [["updated_at", "2020-04-05 19:18:19.990928"], ["id", 14]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (503.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: eb96cd25-1669-456b-961f-a8c03ea5bfd7) to Async(default) with arguments: #<GlobalID:0x00000000098ea900 @uri=#<URI::GID gid://blog/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/postes/14
+Completed 302 Found in 3265ms (ActiveRecord: 921.1ms)
+
+
+Started GET "/postes/14" for ::1 at 2020-04-05 22:18:21 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 14], ["record_type", "Poste"], ["name", "img"], ["LIMIT", 1]]
+  ↳ app/views/postes/show.html.erb:11
+  Rendered postes/show.html.erb within layouts/application (50.2ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `to_model' for #<ActiveStorage::Attached::Many:0x000000000a020dc8>
+Did you mean?  to_yaml):
+     9: <div>
+    10: <div>
+    11: <% if @poste.img.attached?%>
+    12: <image src="<%= url_for(@poste.img)%>">
+    13: <% end %>
+    14: <div>
+    15: <div>
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+app/views/postes/show.html.erb:12:in `_app_views_postes_show_html_erb__973731265_83000880'
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eb96cd25-1669-456b-961f-a8c03ea5bfd7] Performing ActiveStorage::AnalyzeJob (Job ID: eb96cd25-1669-456b-961f-a8c03ea5bfd7) from Async(default) with arguments: #<GlobalID:0x000000000d1a2400 @uri=#<URI::GID gid://blog/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eb96cd25-1669-456b-961f-a8c03ea5bfd7] [36m  Disk Storage (63.8ms) [0m[34mDownloaded file from key: oZSwEKbCapFjdH8KxrMUAYTB[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eb96cd25-1669-456b-961f-a8c03ea5bfd7] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eb96cd25-1669-456b-961f-a8c03ea5bfd7]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eb96cd25-1669-456b-961f-a8c03ea5bfd7]   ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eb96cd25-1669-456b-961f-a8c03ea5bfd7]   [1m[36mActiveStorage::Blob Update (2.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eb96cd25-1669-456b-961f-a8c03ea5bfd7]   ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eb96cd25-1669-456b-961f-a8c03ea5bfd7]   [1m[35m (504.9ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eb96cd25-1669-456b-961f-a8c03ea5bfd7]   ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [eb96cd25-1669-456b-961f-a8c03ea5bfd7] Performed ActiveStorage::AnalyzeJob (Job ID: eb96cd25-1669-456b-961f-a8c03ea5bfd7) from Async(default) in 728.01ms
+Started GET "/postes" for ::1 at 2020-04-05 23:19:16 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.5ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (24.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 846ms (Views: 813.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 23:19:23 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (59.8ms)
+  Rendered postes/new.html.erb within layouts/application (64.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 332ms (Views: 327.5ms | ActiveRecord: 0.4ms)
+
+
