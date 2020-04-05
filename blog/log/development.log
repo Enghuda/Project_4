@@ -529,3 +529,421 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 776ms (Views: 560.4ms | ActiveRecord: 3.1ms)
 
 
+Started GET "/users/sign_in" for ::1 at 2020-04-05 12:55:26 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (84.3ms)
+Completed 200 OK in 856ms (Views: 825.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/pages/about" for ::1 at 2020-04-05 12:56:53 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 86ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for ::1 at 2020-04-05 13:09:38 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:09:43 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 64ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:09:47 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:11:46 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (453.5ms)
+Completed 500 Internal Server Error in 472ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x000000000e80c290>:0x000000000e816948>):
+    1: <header>
+    2: <nav>
+    3: <ul>
+    4: <%= link_to 'About' , about_path%>
+    5: <ul>
+    6: <nav>
+    7: <header>
+  
+app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb__56819089_121660700'
+Started GET "/" for ::1 at 2020-04-05 13:11:58 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 87ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:12:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 110ms (Views: 105.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:14:45 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 113ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:14:56 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:17:36 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:17:40 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:17:46 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 88ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:18:08 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:18:12 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 77ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:18:27 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 90ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:18:38 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 111ms (Views: 105.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:18:40 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:20:24 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 90ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:20:29 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 116ms (Views: 109.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:21:13 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 446ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home' for #<#<Class:0x000000000e285df8>:0x000000000e13e378>):
+    14:       <header>
+    15:           <nav>
+    16:           <ul>
+    17:            <%= link_to 'Home' , home%>
+    18:           <%= link_to 'About' , about_path%>
+    19:           <ul>
+    20:           <nav>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__287220154_118108060'
+Started GET "/about" for ::1 at 2020-04-05 13:21:29 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 445ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_path' for #<#<Class:0x000000000e285df8>:0x000000000e4d2ca0>):
+    14:       <header>
+    15:           <nav>
+    16:           <ul>
+    17:            <%= link_to 'Home' , home_path%>
+    18:           <%= link_to 'About' , about_path%>
+    19:           <ul>
+    20:           <nav>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__287220154_119986000'
+Started GET "/about" for ::1 at 2020-04-05 13:22:06 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 92ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:22:09 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 143ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:22:12 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes/1" for ::1 at 2020-04-05 13:35:11 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for PostesController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/1" for ::1 at 2020-04-05 13:36:36 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 481ms (Views: 477.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes/show" for ::1 at 2020-04-05 13:38:53 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 84ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes/show" for ::1 at 2020-04-05 13:38:57 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 73ms (Views: 69.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes/3" for ::1 at 2020-04-05 13:40:42 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 85ms (Views: 80.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes/3" for ::1 at 2020-04-05 13:42:57 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.7ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+Completed 404 Not Found in 74ms (ActiveRecord: 2.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Poste with 'id'=1):
+  
+app/controllers/postes_controller.rb:3:in `show'
+  [1m[36mPoste Load (5.0ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/postes/1" for ::1 at 2020-04-05 13:54:29 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.6ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+Completed 404 Not Found in 17ms (ActiveRecord: 3.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Poste with 'id'=1):
+  
+app/controllers/postes_controller.rb:3:in `show'
+Started GET "/show/1" for ::1 at 2020-04-05 13:54:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/show/1"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/1" for ::1 at 2020-04-05 13:55:30 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Poste with 'id'=1):
+  
+app/controllers/postes_controller.rb:3:in `show'
+Started GET "/postes/2" for ::1 at 2020-04-05 13:56:26 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPoste Load (0.6ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Poste with 'id'=2):
+  
+app/controllers/postes_controller.rb:3:in `show'
+  [1m[36mPoste Load (5.5ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPoste Create (1.7ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dior Sauvage EDP"], ["description", "s the perfect mix to make you feel classy yet elegant all day long."], ["created_at", "2020-04-05 11:09:55.079922"], ["updated_at", "2020-04-05 11:09:55.079922"]]
+  [1m[35m (76.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "postes"[0m
+Started GET "/postes/1" for ::1 at 2020-04-05 14:10:55 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.7ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 83ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <h2>Poste</h2>
+    2: <div>
+    3: Name : 
+    4: <%= @Poste.name%>
+    5: <div>
+    6: <div>
+    7: Description :
+  
+app/views/postes/show.html.erb:4:in `_app_views_postes_show_html_erb__508211235_107138280'
+Started GET "/postes/1" for ::1 at 2020-04-05 14:11:32 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.5ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 396ms (Views: 387.3ms | ActiveRecord: 0.5ms)
+
+
