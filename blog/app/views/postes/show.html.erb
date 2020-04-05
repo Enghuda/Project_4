@@ -7,3 +7,5 @@ Name :
 Description :
 <%= @poste.description%>
 <div>
+<%= link_to 'Edit' , poste_edit_path%>
+<%= link_to 'Delete' ,poste_path , method: :delete, data: {confirm: 'Are You Sure ? '}%>
