@@ -1,0 +1,11 @@
+<%= form_with model: @poste , local:true do |f|%>
+<p>
+Name : 
+<%= f.text_field :name%>
+<p>
+<p>
+Description : 
+<%= f.text_field :description%>
+<p>
+<%= f.submit %>
+<% end %>

@@ -947,3 +947,1857 @@ Processing by PostesController#show as HTML
 Completed 200 OK in 396ms (Views: 387.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/postes" for ::1 at 2020-04-05 14:17:25 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/postes"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes" for ::1 at 2020-04-05 14:18:34 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  Rendered postes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 785ms (Views: 780.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 14:18:41 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 193ms (Views: 184.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 14:18:43 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 109ms (Views: 103.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPoste Create (2.3ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Giorgio Armani Emporio Armani Stronger With You Intensely"], ["description", "for every romantic gentle man, This strong fascinating fragrance is for you. It was released to capture all people hearts from the first smell to tell a story of an outstanding emotional man who is deeply in love and is ready to do anything for their lovers."], ["created_at", "2020-04-05 11:26:34.236653"], ["updated_at", "2020-04-05 11:26:34.236653"]]
+  [1m[35m (118.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/postes" for ::1 at 2020-04-05 14:29:19 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  Rendered postes/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/enghu/OneDrive/Desktop/Project_4/blog/app/views/postes/index.html.erb:3: syntax error, unexpected ')'
+....append=( @postes.each |poste|);@output_buffer.safe_append='
+...                              ^
+C:/Users/enghu/OneDrive/Desktop/Project_4/blog/app/views/postes/index.html.erb:7: syntax error, unexpected end, expecting ')'
+'.freeze; end 
+          ^~~
+C:/Users/enghu/OneDrive/Desktop/Project_4/blog/app/views/postes/index.html.erb:9: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+C:/Users/enghu/OneDrive/Desktop/Project_4/blog/app/views/postes/index.html.erb:11: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/postes/index.html.erb:3: syntax error, unexpected ')'
+app/views/postes/index.html.erb:7: syntax error, unexpected end, expecting ')'
+app/views/postes/index.html.erb:9: syntax error, unexpected ensure, expecting ')'
+app/views/postes/index.html.erb:11: syntax error, unexpected end, expecting ')'
+Started GET "/postes" for ::1 at 2020-04-05 14:30:26 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.8ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 116ms (Views: 107.9ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:36:46 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 85ms (Views: 81.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:36:49 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 61ms (Views: 55.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:36:53 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.5ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 124ms (Views: 119.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:37:01 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 72ms (Views: 67.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:37:03 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.6ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 133ms (Views: 128.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:37:51 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.8ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 92ms (Views: 85.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:37:54 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.5ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 114ms (Views: 109.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:39:43 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.6ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 174ms (Views: 157.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:39:49 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.7ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 102ms (Views: 96.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:40:18 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.5ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 576ms (Views: 563.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:40:22 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.4ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 80ms (Views: 74.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:40:26 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 61ms (Views: 57.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:40:38 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.4ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 74ms (Views: 68.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 14:41:07 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.4ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 219ms (Views: 212.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/postes/1" for ::1 at 2020-04-05 14:41:09 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.5ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 65.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/postes/2" for ::1 at 2020-04-05 14:41:15 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 96ms (Views: 90.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 14:44:47 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for PostesController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/new" for ::1 at 2020-04-05 14:46:26 +0300
+  
+AbstractController::ActionNotFound (The action 'new' could not be found for PostesController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/new" for ::1 at 2020-04-05 14:47:10 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 216ms (Views: 214.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 14:52:15 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 14:54:02 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/new.html.erb within layouts/application (226.9ms)
+Completed 200 OK in 257ms (Views: 254.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 14:55:31 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/postes/new" for ::1 at 2020-04-05 14:55:38 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/postes/new"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes" for ::1 at 2020-04-05 15:01:53 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 38ms (Views: 32.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/postes/1" for ::1 at 2020-04-05 15:01:57 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 31ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/1" for ::1 at 2020-04-05 15:05:58 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 34ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/postes/1" for ::1 at 2020-04-05 15:06:01 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 15:06:35 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/postes" for ::1 at 2020-04-05 15:07:02 +0300
+  
+AbstractController::ActionNotFound (The action 'creat' could not be found for PostesController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/postes" for ::1 at 2020-04-05 15:07:29 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aDIuvJTwh1LY2zN7Las15cCAeKJ08lLB+3/gBMTrJ+kTn68HGpXQH0Lq5NykE2Uhjmr3pGXy5D8N/fHiItirRg==", "poste"=>{"name"=>"test", "description"=>"test22"}, "commit"=>"Create Poste"}
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `requir' for #<ActionController::Parameters:0x000000000e398718>
+Did you mean?  require
+               required):
+  
+app/controllers/postes_controller.rb:19:in `poste_params'
+app/controllers/postes_controller.rb:12:in `create'
+Started POST "/postes" for ::1 at 2020-04-05 15:08:02 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aDIuvJTwh1LY2zN7Las15cCAeKJ08lLB+3/gBMTrJ+kTn68HGpXQH0Lq5NykE2Uhjmr3pGXy5D8N/fHiItirRg==", "poste"=>{"name"=>"test", "description"=>"test22"}, "commit"=>"Create Poste"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (2.1ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "test"], ["description", "test22"], ["created_at", "2020-04-05 12:08:02.482283"], ["updated_at", "2020-04-05 12:08:02.482283"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (494.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+Redirected to http://localhost:3000/postes/3
+Completed 302 Found in 520ms (ActiveRecord: 497.4ms)
+
+
+Started GET "/postes/3" for ::1 at 2020-04-05 15:08:03 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/index" for ::1 at 2020-04-05 15:08:29 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Poste with 'id'=index):
+  
+app/controllers/postes_controller.rb:3:in `show'
+Started GET "/postes" for ::1 at 2020-04-05 15:08:50 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes/3" for ::1 at 2020-04-05 15:08:54 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 15:13:17 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (1.4ms)
+  Rendered postes/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 56ms (Views: 47.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/postes" for ::1 at 2020-04-05 15:13:51 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uJHcs1sj2x8gc4NFUNd2QJrIXkw//q/rJKjm0ppih5fDPF0I1UaMUrpCVOLZbyaE1CLRSi7+GRXSKvc0fFELOA==", "poste"=>{"name"=>"testtt", "description"=>"hiiii"}, "commit"=>"Create Poste"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (40.9ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "testtt"], ["description", "hiiii"], ["created_at", "2020-04-05 12:13:51.371057"], ["updated_at", "2020-04-05 12:13:51.371057"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (844.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+Redirected to http://localhost:3000/postes/4
+Completed 302 Found in 902ms (ActiveRecord: 885.0ms)
+
+
+Started GET "/postes/4" for ::1 at 2020-04-05 15:13:52 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 15:13:57 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 15:14:09 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 31ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes/show" for ::1 at 2020-04-05 16:21:30 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mPoste Load (0.4ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+Completed 404 Not Found in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Poste with 'id'=show):
+  
+app/controllers/postes_controller.rb:3:in `show'
+Started GET "/postes" for ::1 at 2020-04-05 16:21:54 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 100ms (Views: 97.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 16:22:05 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (4.7ms)
+  Rendered postes/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes/3" for ::1 at 2020-04-05 16:22:49 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (263.5ms)
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_poste_pathe' for #<#<Class:0x000000000e8804b0>:0x000000000cf95fb8>
+Did you mean?  edit_password_path):
+     8: <%= @poste.description%>
+     9: <div>
+    10: 
+    11: <%= link_to 'Edit' , edit_poste_pathe(@poste)%>
+    12: <%= link_to 'Delete' , poste_pathe(@poste), method: :delete , data: {confirm: "Are YOu Sure ? "} %>
+  
+app/views/postes/show.html.erb:11:in `_app_views_postes_show_html_erb__216453687_108837640'
+Started GET "/" for ::1 at 2020-04-05 16:26:31 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 16:26:41 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 38ms (Views: 31.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/postes/4" for ::1 at 2020-04-05 16:26:47 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (164.6ms)
+Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_poste_pathe' for #<#<Class:0x000000000e522ac0>:0x000000000e8d7440>
+Did you mean?  edit_password_path):
+     8: <%= @poste.description%>
+     9: <div>
+    10: 
+    11: <%= link_to 'Edit' , edit_poste_pathe(@poste)%>
+    12: <%= link_to 'Delete' , poste_pathe(@poste), method: :delete , data: {confirm: "Are YOu Sure ? "} %>
+  
+app/views/postes/show.html.erb:11:in `_app_views_postes_show_html_erb__216453687_122053380'
+Started GET "/postes" for ::1 at 2020-04-05 16:33:12 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 132ms (Views: 127.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 16:33:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/postes/3/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 16:34:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/postes/3/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 16:35:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/postes/3/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/3" for ::1 at 2020-04-05 16:36:06 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (154.4ms)
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_poste_pathe' for #<#<Class:0x000000000cd88f40>:0x000000000cd7c858>
+Did you mean?  edit_password_path):
+     8: <%= @poste.description%>
+     9: <div>
+    10: 
+    11: <%= link_to 'Edit' , edit_poste_pathe(@poste)%>
+    12: <%= link_to 'Delete' , poste_pathe(@poste), method: :delete , data: {confirm: "Are YOu Sure ? "} %>
+  
+app/views/postes/show.html.erb:11:in `_app_views_postes_show_html_erb__216453687_107762140'
+Started GET "/postes/3" for ::1 at 2020-04-05 16:37:01 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (152.2ms)
+Completed 500 Internal Server Error in 166ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_poste_pathe' for #<#<Class:0x000000000db4e580>:0x000000000db4cc58>
+Did you mean?  edit_password_path):
+     8: <%= @poste.description%>
+     9: <div>
+    10: 
+    11: <%= link_to 'Edit' , edit_poste_pathe(@poste)%>
+    12: <%= link_to 'Delete' , poste_pathe(@poste), method: :delete , data: {confirm: "Are YOu Sure ? "} %>
+  
+app/views/postes/show.html.erb:11:in `_app_views_postes_show_html_erb__216453687_114980500'
+Started GET "/postes/" for ::1 at 2020-04-05 16:37:08 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/1" for ::1 at 2020-04-05 16:37:11 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (126.6ms)
+Completed 500 Internal Server Error in 133ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_poste_pathe' for #<#<Class:0x000000000db4e580>:0x000000000da2d548>
+Did you mean?  edit_password_path):
+     8: <%= @poste.description%>
+     9: <div>
+    10: 
+    11: <%= link_to 'Edit' , edit_poste_pathe(@poste)%>
+    12: <%= link_to 'Delete' , poste_pathe(@poste), method: :delete , data: {confirm: "Are YOu Sure ? "} %>
+  
+app/views/postes/show.html.erb:11:in `_app_views_postes_show_html_erb__216453687_114389080'
+Started GET "/postes/1" for ::1 at 2020-04-05 16:37:41 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/postes/" for ::1 at 2020-04-05 16:37:51 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 16:41:23 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (1.4ms)
+  Rendered postes/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/postes" for ::1 at 2020-04-05 16:41:36 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o6U6yi4pXagVaon4BljhFSs5v76EUaXCGoOuswQ0zSHYCLtxoEwK5Y9bXl+P4LHRZdMwuJVREzzsAb9V4gdBjg==", "poste"=>{"name"=>"hiii", "description"=>"heeee"}, "commit"=>"Create Poste"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (79.1ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hiii"], ["description", "heeee"], ["created_at", "2020-04-05 13:41:37.016813"], ["updated_at", "2020-04-05 13:41:37.016813"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (111.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+Redirected to http://localhost:3000/postes/5
+Completed 302 Found in 207ms (ActiveRecord: 191.0ms)
+
+
+Started GET "/postes/5" for ::1 at 2020-04-05 16:41:37 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 32.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes/" for ::1 at 2020-04-05 16:43:25 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.4ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 16:47:16 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 16:47:18 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 16:47:26 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (720.9ms)
+Completed 500 Internal Server Error in 729ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `poste_new' for #<#<Class:0x000000000db4e580>:0x000000000cb06e20>
+Did you mean?  poste_url):
+    5: <%= link_to poste.name , poste %>
+    6: <div>
+    7: <% end %>
+    8: <%= link_to "Add poste" , poste_new%>
+  
+app/views/postes/index.html.erb:8:in `_app_views_postes_index_html_erb__1029056446_106423620'
+Started GET "/postes" for ::1 at 2020-04-05 16:47:37 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes/1" for ::1 at 2020-04-05 16:47:43 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 16:47:50 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (1.1ms)
+  Rendered postes/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 42ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/postes" for ::1 at 2020-04-05 16:48:00 +0300
+Processing by PostesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/ZqwyrOrwXOvhUYH9Jh9BZV04kbMVkRVl7hgPc4GPJCGNzFxPc6WPjW0kaB9IC3B255tQN1W8qthOnHbKDWwPw==", "poste"=>{"name"=>"hi", "description"=>"hi"}, "commit"=>"Create Poste"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[36mPoste Create (176.8ms)[0m  [1m[32mINSERT INTO "postes" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "hi"], ["description", "hi"], ["created_at", "2020-04-05 13:48:00.661157"], ["updated_at", "2020-04-05 13:48:00.661157"]]
+  ↳ app/controllers/postes_controller.rb:13
+  [1m[35m (848.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:13
+Redirected to http://localhost:3000/postes/6
+Completed 302 Found in 1045ms (ActiveRecord: 1025.3ms)
+
+
+Started GET "/postes/6" for ::1 at 2020-04-05 16:48:01 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 60ms (Views: 57.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/6" for ::1 at 2020-04-05 18:52:31 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:3
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 685ms (Views: 643.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/postes/" for ::1 at 2020-04-05 18:52:42 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/" for ::1 at 2020-04-05 18:54:20 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (833.6ms)
+Completed 500 Internal Server Error in 841ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_postes_path' for #<#<Class:0x000000000ba34b10>:0x000000000ccf8e68>
+Did you mean?  new_password_path):
+    5: <%= link_to poste.name , poste %>
+    6: <div>
+    7: <% end %>
+    8: <%= link_to "Add Poste" , new_postes_path %>
+  
+app/views/postes/index.html.erb:8:in `_app_views_postes_index_html_erb__230734953_107465600'
+Started GET "/postes/" for ::1 at 2020-04-05 18:56:01 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (732.1ms)
+Completed 500 Internal Server Error in 740ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `postes_new' for #<#<Class:0x000000000ba34b10>:0x0000000008019d68>
+Did you mean?  postes_url):
+    5: <%= link_to poste.name , poste %>
+    6: <div>
+    7: <% end %>
+    8: <%= link_to "Add Poste" , postes_new %>
+  
+app/views/postes/index.html.erb:8:in `_app_views_postes_index_html_erb__230734953_67162880'
+Started GET "/postes/" for ::1 at 2020-04-05 18:56:16 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 18:56:23 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (166.9ms)
+  Rendered postes/new.html.erb within layouts/application (168.9ms)
+Completed 200 OK in 195ms (Views: 192.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes/new" for ::1 at 2020-04-05 19:00:40 +0300
+Processing by PostesController#new as HTML
+  Rendering postes/new.html.erb within layouts/application
+  Rendered postes/_form.html.erb (1.5ms)
+  Rendered postes/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 39ms (Views: 30.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/postes/3" for ::1 at 2020-04-05 19:01:12 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:25
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 19:01:26 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 27.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/1" for ::1 at 2020-04-05 19:01:29 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:25
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/2" for ::1 at 2020-04-05 19:01:50 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:25
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-05 19:05:18 +0300
+  
+SyntaxError (C:/Users/enghu/OneDrive/Desktop/Project_4/blog/app/controllers/postes_controller.rb:23: syntax error, unexpected '(', expecting end
+...       redirect_to @poste_path(@poste)
+...                              ^):
+  
+app/controllers/postes_controller.rb:23: syntax error, unexpected '(', expecting end
+Started GET "/postes" for ::1 at 2020-04-05 19:06:32 +0300
+  
+SyntaxError (C:/Users/enghu/OneDrive/Desktop/Project_4/blog/app/controllers/postes_controller.rb:23: syntax error, unexpected '(', expecting end
+...       redirect_to @poste_path(@poste)
+...                              ^):
+  
+app/controllers/postes_controller.rb:23: syntax error, unexpected '(', expecting end
+Started GET "/postes" for ::1 at 2020-04-05 19:07:26 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 35ms (Views: 30.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 19:07:45 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/postes/3/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 19:13:01 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/postes/3/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 19:13:48 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/postes/3/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 19:14:33 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/postes/3/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 19:14:35 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/postes/3/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 19:14:36 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/postes/3/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 19:15:01 +0300
+  
+ArgumentError (Invalid route name, already in use: 'poste' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:7:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 19:18:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/postes/3/edit"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 19:19:08 +0300
+Processing by PostesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:34
+  Rendering postes/edit.html.erb within layouts/application
+  Rendered postes/_form.html.erb (12.0ms)
+  Rendered postes/edit.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 204ms (Views: 189.9ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/postes/3" for ::1 at 2020-04-05 19:19:30 +0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/postes/3"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/postes/3" for ::1 at 2020-04-05 19:19:48 +0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/postes/3"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 19:20:14 +0300
+Processing by PostesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:34
+  Rendering postes/edit.html.erb within layouts/application
+  Rendered postes/_form.html.erb (1.3ms)
+  Rendered postes/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 37ms (Views: 29.0ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/postes/3" for ::1 at 2020-04-05 19:20:22 +0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/postes/3"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started PATCH "/postes/3" for ::1 at 2020-04-05 19:20:42 +0300
+Processing by PostesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mqO74ZyuWrJaWlN82bMSb4RLN7pb1dPZLl/PsQQuN2vhDjpaEssN/8BrhNtQC0KryqG4vErVZSfY3d5X4h27xA==", "poste"=>{"name"=>"test", "description"=>"hudhd"}, "commit"=>"Update Poste", "id"=>"3"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:34
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:22
+  [1m[36mPoste Update (37.7ms)[0m  [1m[33mUPDATE "postes" SET "description" = ?, "updated_at" = ? WHERE "postes"."id" = ?[0m  [["description", "hudhd"], ["updated_at", "2020-04-05 16:20:42.591446"], ["id", 3]]
+  ↳ app/controllers/postes_controller.rb:22
+  [1m[35m (74.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:22
+Redirected to http://localhost:3000/postes/3
+Completed 302 Found in 258ms (ActiveRecord: 112.7ms)
+
+
+Started GET "/postes/3" for ::1 at 2020-04-05 19:20:42 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:34
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/postes/3" for ::1 at 2020-04-05 19:23:48 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:34
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (177.5ms)
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_poste_path' for #<#<Class:0x000000000d97d300>:0x000000000e12c560>
+Did you mean?  poste_edit_path):
+     7: Description :
+     8: <%= @poste.description%>
+     9: <div>
+    10: <%= link_to 'Edit' , edit_poste_path(@post)%>
+    11: <%= link_to 'Delete' ,poste_path(@post) , method: :delete, data: {confirm: 'Are You Sure ? '}%>
+  
+app/views/postes/show.html.erb:10:in `_app_views_postes_show_html_erb__72411029_118057200'
+Started GET "/postes/3" for ::1 at 2020-04-05 19:25:10 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.6ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:34
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"edit", :controller=>"postes", :id=>nil}, missing required keys: [:id]):
+     7: Description :
+     8: <%= @poste.description%>
+     9: <div>
+    10: <%= link_to 'Edit' , poste_edit_path(@post)%>
+    11: <%= link_to 'Delete' ,poste_path(@post) , method: :delete, data: {confirm: 'Are You Sure ? '}%>
+  
+app/views/postes/show.html.erb:10:in `_app_views_postes_show_html_erb__72411029_119463420'
+Started GET "/postes/3" for ::1 at 2020-04-05 19:25:38 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:34
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"postes", :id=>nil}, missing required keys: [:id]):
+     8: <%= @poste.description%>
+     9: <div>
+    10: <%= link_to 'Edit' , poste_edit_path%>
+    11: <%= link_to 'Delete' ,poste_path(@post) , method: :delete, data: {confirm: 'Are You Sure ? '}%>
+  
+app/views/postes/show.html.erb:11:in `_app_views_postes_show_html_erb__72411029_123480840'
+Started GET "/postes/3" for ::1 at 2020-04-05 19:25:56 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:34
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/3/edit" for ::1 at 2020-04-05 19:25:59 +0300
+Processing by PostesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:34
+  Rendering postes/edit.html.erb within layouts/application
+  Rendered postes/_form.html.erb (1.3ms)
+  Rendered postes/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/postes/3" for ::1 at 2020-04-05 19:26:05 +0300
+Processing by PostesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yiAnRPTDagdDol+ttDnyOiA/a/xGYYummGLJnqugxm+xjab/eqY9StmTiAo9gaL+btXk+ldhPVhu4Nh4TZNKwA==", "poste"=>{"name"=>"test", "description"=>"hudhd"}, "commit"=>"Update Poste", "id"=>"3"}
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:34
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:22
+Redirected to http://localhost:3000/postes/3
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/postes/3" for ::1 at 2020-04-05 19:26:05 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:34
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/postes/3" for ::1 at 2020-04-05 19:26:10 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/postes/3"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/postes/3" for ::1 at 2020-04-05 19:26:42 +0300
+  
+ArgumentError (Invalid route name, already in use: 'postes' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:8:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started DELETE "/postes/3" for ::1 at 2020-04-05 19:27:05 +0300
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for PostesController):
+  
+actionpack (5.2.4.2) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.4.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/postes/3" for ::1 at 2020-04-05 19:28:48 +0300
+Processing by PostesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6Bd3dzzom1jNfUkCyE2/Ur9Y3AFv4UK3mJSgK4MB/uaTuvbMso3MFVdMnqVB9e+W8bJTB37h9EluFrHNZTJySQ==", "id"=>"3"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:29
+  [1m[36mPoste Destroy (1.6ms)[0m  [1m[31mDELETE FROM "postes" WHERE "postes"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/postes_controller.rb:29
+  [1m[35m (109.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:29
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms (ActiveRecord: 112.2ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 19:28:48 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2020-04-05 19:29:05 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/patients"):
+  
+actionpack (5.2.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/postes" for ::1 at 2020-04-05 19:29:10 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 37ms (Views: 34.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/postes/3" for ::1 at 2020-04-05 19:29:13 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Poste with 'id'=3):
+  
+app/controllers/postes_controller.rb:38:in `find_poste'
+Started GET "/postes/4" for ::1 at 2020-04-05 19:29:24 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/postes/4" for ::1 at 2020-04-05 19:29:29 +0300
+Processing by PostesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"q3nqjawOPDI/bQ45eOB95Q71qEM0ZLyS3YKpEVXlCVPQ1Gs2Imtrf6Vc2Z7xWC0hQB8nRSVkCmwrALj3s9aF/A==", "id"=>"4"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/postes_controller.rb:29
+  [1m[36mPoste Destroy (0.7ms)[0m  [1m[31mDELETE FROM "postes" WHERE "postes"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/postes_controller.rb:29
+  [1m[35m (136.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/postes_controller.rb:29
+Redirected to http://localhost:3000/
+Completed 302 Found in 139ms (ActiveRecord: 136.9ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 19:29:29 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/postes/4" for ::1 at 2020-04-05 19:29:33 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Poste with 'id'=4):
+  
+app/controllers/postes_controller.rb:38:in `find_poste'

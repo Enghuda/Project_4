@@ -1,0 +1,8 @@
+<h2>All Postes</h2>
+
+<% @postes.each do |poste|%>
+<div>
+<%= link_to poste.name , poste %>
+<div>
+<% end %>
+<%= link_to "Add Poste" , postes_new_path%>
