@@ -12,5 +12,5 @@ get 'postes/new' , to: 'postes#new'
  get 'pages/home'
  get 'pages/about'
  get 'about',to:'pages#about'
-  root 'pages#home'
+root 'pages#home'
     end
