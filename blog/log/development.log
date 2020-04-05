@@ -529,3 +529,214 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 776ms (Views: 560.4ms | ActiveRecord: 3.1ms)
 
 
+Started GET "/users/sign_in" for ::1 at 2020-04-05 12:55:26 +0300
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (84.3ms)
+Completed 200 OK in 856ms (Views: 825.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/pages/about" for ::1 at 2020-04-05 12:56:53 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 86ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/pages/about" for ::1 at 2020-04-05 13:09:38 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 71ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:09:43 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 64ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:09:47 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 64.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:11:46 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (453.5ms)
+Completed 500 Internal Server Error in 472ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `about_path' for #<#<Class:0x000000000e80c290>:0x000000000e816948>):
+    1: <header>
+    2: <nav>
+    3: <ul>
+    4: <%= link_to 'About' , about_path%>
+    5: <ul>
+    6: <nav>
+    7: <header>
+  
+app/views/pages/home.html.erb:4:in `_app_views_pages_home_html_erb__56819089_121660700'
+Started GET "/" for ::1 at 2020-04-05 13:11:58 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 87ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:12:02 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 110ms (Views: 105.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:14:45 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 113ms (Views: 108.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:14:56 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 60ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:17:36 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 74ms (Views: 69.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:17:40 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 62ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:17:46 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 88ms (Views: 83.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:18:08 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 79ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:18:12 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 77ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:18:27 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 90ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:18:38 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 111ms (Views: 105.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:18:40 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:20:24 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 90ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:20:29 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 116ms (Views: 109.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:21:13 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 446ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home' for #<#<Class:0x000000000e285df8>:0x000000000e13e378>):
+    14:       <header>
+    15:           <nav>
+    16:           <ul>
+    17:            <%= link_to 'Home' , home%>
+    18:           <%= link_to 'About' , about_path%>
+    19:           <ul>
+    20:           <nav>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__287220154_118108060'
+Started GET "/about" for ::1 at 2020-04-05 13:21:29 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 445ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `home_path' for #<#<Class:0x000000000e285df8>:0x000000000e4d2ca0>):
+    14:       <header>
+    15:           <nav>
+    16:           <ul>
+    17:            <%= link_to 'Home' , home_path%>
+    18:           <%= link_to 'About' , about_path%>
+    19:           <ul>
+    20:           <nav>
+  
+app/views/layouts/application.html.erb:17:in `_app_views_layouts_application_html_erb__287220154_119986000'
+Started GET "/about" for ::1 at 2020-04-05 13:22:06 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 92ms (Views: 85.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-04-05 13:22:09 +0300
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 143ms (Views: 137.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-04-05 13:22:12 +0300
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
