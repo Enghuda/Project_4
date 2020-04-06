@@ -32,7 +32,7 @@ end
 
     private
     def poste_params
-        params.required(:poste).permit(:name , :description)       
+        params.required(:poste).permit(:name , :description , :image)       
     end
     def find_poste
         @poste = Poste.find(params[:id])   
