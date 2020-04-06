@@ -8385,3 +8385,118 @@ Processing by PostesController#index as HTML
 Completed 200 OK in 266ms (Views: 263.8ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/postes" for 127.0.0.1 at 2020-04-06 12:27:29 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.3ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (17.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 408ms (Views: 396.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/postes/1" for 127.0.0.1 at 2020-04-06 12:27:37 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 75ms (Views: 72.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/postes/7" for ::1 at 2020-04-06 12:28:03 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 81ms (Views: 78.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes/7" for ::1 at 2020-04-06 12:28:12 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 75ms (Views: 73.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-06 12:28:18 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 85ms (Views: 83.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/postes/1" for ::1 at 2020-04-06 12:28:20 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  Rendered postes/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 78ms (Views: 75.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes" for ::1 at 2020-04-06 12:28:42 +0300
+Processing by PostesController#index as HTML
+  Rendering postes/index.html.erb within layouts/application
+  [1m[36mPoste Load (0.2ms)[0m  [1m[34mSELECT "postes".* FROM "postes"[0m
+  ↳ app/views/postes/index.html.erb:3
+  Rendered postes/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/postes/1" for ::1 at 2020-04-06 12:28:43 +0300
+Processing by PostesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPoste Load (0.1ms)[0m  [1m[34mSELECT  "postes".* FROM "postes" WHERE "postes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/postes_controller.rb:38
+  Rendering postes/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Poste"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/postes/show.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/postes/show.html.erb:11
+  Rendered postes/show.html.erb within layouts/application (78.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 173ms (Views: 168.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2f1d9b66a9ea394b53493f2a38d79796d8dd8136/11292.jpg" for ::1 at 2020-04-06 12:28:43 +0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2f1d9b66a9ea394b53493f2a38d79796d8dd8136", "filename"=>"11292"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (37.3ms) [0m[34mGenerated URL for file at key: yUwsYDQQzWAy9XzzJNhddJVj (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRlVlYzYzFsRVVWRjZWMEY1T1ZoNmVrcE9hR1JrU2xacUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVEV5T1RJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TVRJNU1pNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQwOTozMzo0My44OTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--44ad5f26d83915c4c4c82037b03bc42c6a924846/11292.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2211292.jpg%22%3B+filename%2A%3DUTF-8%27%2711292.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRlVlYzYzFsRVVWRjZWMEY1T1ZoNmVrcE9hR1JrU2xacUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVEV5T1RJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TVRJNU1pNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQwOTozMzo0My44OTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--44ad5f26d83915c4c4c82037b03bc42c6a924846/11292.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2211292.jpg%22%3B+filename%2A%3DUTF-8%27%2711292.jpg
+Completed 302 Found in 40ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRlVlYzYzFsRVVWRjZWMEY1T1ZoNmVrcE9hR1JrU2xacUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVEV5T1RJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TVRJNU1pNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQwOTozMzo0My44OTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--44ad5f26d83915c4c4c82037b03bc42c6a924846/11292.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2211292.jpg%22%3B+filename%2A%3DUTF-8%27%2711292.jpg" for ::1 at 2020-04-06 12:28:43 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"11292.jpg\"; filename*=UTF-8''11292.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRlVlYzYzFsRVVWRjZWMEY1T1ZoNmVrcE9hR1JrU2xacUJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlNVEV5T1RJdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWN4TVRJNU1pNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQwOTozMzo0My44OTZaIiwicHVyIjoiYmxvYl9rZXkifX0=--44ad5f26d83915c4c4c82037b03bc42c6a924846", "filename"=>"11292"}
+Completed 200 OK in 7ms (ActiveRecord: 0.0ms)
+
+
