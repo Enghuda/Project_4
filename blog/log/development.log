@@ -13053,3 +13053,809 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 80ms (Views: 77.5ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateComments (20200406211111)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (18.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200406211111_create_comments.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "body" text, "post_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_2fd19c0db7"
+FOREIGN KEY ("post_id")
+  REFERENCES "posts" ("id")
+)[0m
+  ↳ db/migrate/20200406211111_create_comments.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX "index_comments_on_post_id" ON "comments" ("post_id")[0m
+  ↳ db/migrate/20200406211111_create_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200406211111"]]
+  ↳ bin/rails:4
+  [1m[35m (81.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/posts" for ::1 at 2020-04-07 00:24:35 +0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (42.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 2156ms (Views: 2090.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-07 00:24:46 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 115ms (Views: 112.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/2" for ::1 at 2020-04-07 00:24:50 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  Rendered posts/show.html.erb within layouts/application (182.3ms)
+Completed 500 Internal Server Error in 192ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+    25:   <%= @post.genger %>
+    26: </p>
+    27: <div style='width:250px;height:350px'>
+    28: <%= link_to image_tag(@post.image, style:'width:100%') , posts_path%>
+    29: </div>
+    30: 
+    31:       <div class="panel panel-default">
+  
+app/views/posts/show.html.erb:28:in `_app_views_posts_show_html_erb__59132558_108594460'
+Started GET "/posts/9" for ::1 at 2020-04-07 00:25:03 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:41
+  Rendered posts/show.html.erb within layouts/application (209.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 320ms (Views: 314.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--76b7aa907b50eff3707a8ab0f52db939a2598b19/90181.jpg" for ::1 at 2020-04-07 00:25:04 +0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--76b7aa907b50eff3707a8ab0f52db939a2598b19", "filename"=>"90181"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (351.1ms) [0m[34mGenerated URL for file at key: gh3hzoyLN8HiknXunNbYtpio (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMTozMDowNC4zMzVaIiwicHVyIjoiYmxvYl9rZXkifX0=--85f7cda058499c3ae20e9943de1de01a23676e66/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMTozMDowNC4zMzVaIiwicHVyIjoiYmxvYl9rZXkifX0=--85f7cda058499c3ae20e9943de1de01a23676e66/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg
+Completed 302 Found in 355ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMTozMDowNC4zMzVaIiwicHVyIjoiYmxvYl9rZXkifX0=--85f7cda058499c3ae20e9943de1de01a23676e66/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 00:25:04 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMTozMDowNC4zMzVaIiwicHVyIjoiYmxvYl9rZXkifX0=--85f7cda058499c3ae20e9943de1de01a23676e66", "filename"=>"90181"}
+Completed 200 OK in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/9" for ::1 at 2020-04-07 00:37:41 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:41
+  Rendered posts/show.html.erb within layouts/application (10.5ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `comments' for nil:NilClass):
+    55:   <div class="panel-heading">add comment</div>
+    56:   <div class="panel-body"> 
+    57: 
+    58: <%= form_for([@article,@article.comments.build]) do |f| %>
+    59:  
+    60: 
+    61:   <div class="field">
+  
+app/views/posts/show.html.erb:58:in `_app_views_posts_show_html_erb__59132558_116562900'
+Started GET "/posts/9" for ::1 at 2020-04-07 00:38:50 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:41
+  Rendered posts/show.html.erb within layouts/application (289.2ms)
+Completed 500 Internal Server Error in 297ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_comments_path' for #<#<Class:0x0000000009dd7b48>:0x000000000e951ce0>
+Did you mean?  posts_new_path):
+    55:   <div class="panel-heading">add comment</div>
+    56:   <div class="panel-body"> 
+    57: 
+    58: <%= form_for([@post,@post.comments.build]) do |f| %>
+    59:  
+    60: 
+    61:   <div class="field">
+  
+app/views/posts/show.html.erb:58:in `_app_views_posts_show_html_erb__59132558_122327740'
+Started GET "/posts/9" for ::1 at 2020-04-07 00:39:08 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:41
+  Rendered posts/show.html.erb within layouts/application (151.8ms)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_comments_path' for #<#<Class:0x0000000009dd7b48>:0x000000000f832778>
+Did you mean?  posts_new_path):
+    55:   <div class="panel-heading">add comment</div>
+    56:   <div class="panel-body"> 
+    57: 
+    58: <%= form_for([@post,@post.comments.build]) do |f| %>
+    59:  
+    60: 
+    61:   <div class="field">
+  
+app/views/posts/show.html.erb:58:in `_app_views_posts_show_html_erb__59132558_130127880'
+Started GET "/posts/9" for ::1 at 2020-04-07 00:40:33 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:41
+  Rendered posts/show.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 114ms (Views: 110.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--76b7aa907b50eff3707a8ab0f52db939a2598b19/90181.jpg" for ::1 at 2020-04-07 00:40:33 +0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--76b7aa907b50eff3707a8ab0f52db939a2598b19", "filename"=>"90181"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (27.9ms) [0m[34mGenerated URL for file at key: gh3hzoyLN8HiknXunNbYtpio (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMTo0NTozMy43NTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--4087a9923cf1b0af9702455b55f346a8272f7b2e/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMTo0NTozMy43NTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--4087a9923cf1b0af9702455b55f346a8272f7b2e/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg
+Completed 302 Found in 29ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMTo0NTozMy43NTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--4087a9923cf1b0af9702455b55f346a8272f7b2e/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 00:40:33 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMTo0NTozMy43NTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--4087a9923cf1b0af9702455b55f346a8272f7b2e", "filename"=>"90181"}
+Completed 200 OK in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/9" for ::1 at 2020-04-07 00:44:52 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:41
+  Rendered posts/show.html.erb within layouts/application (108.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 464ms (Views: 409.6ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMTo0NTozMy43NTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--4087a9923cf1b0af9702455b55f346a8272f7b2e/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 00:44:53 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMTo0NTozMy43NTJaIiwicHVyIjoiYmxvYl9rZXkifX0=--4087a9923cf1b0af9702455b55f346a8272f7b2e", "filename"=>"90181"}
+Completed 304 Not Modified in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/9" for ::1 at 2020-04-07 00:47:04 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:43
+  Rendered posts/show.html.erb within layouts/application (386.9ms)
+Completed 500 Internal Server Error in 406ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `post_comments_path' for #<#<Class:0x000000000d4eb3f0>:0x00000000098ba048>
+Did you mean?  posts_new_path):
+    63:   <div class="panel-heading">add comment</div>
+    64:   <div class="panel-body"> 
+    65: 
+    66: <%= form_for([@post,@post.comments.build]) do |f| %>
+    67:  
+    68: 
+    69:   <div class="field">
+  
+app/views/posts/show.html.erb:66:in `_app_views_posts_show_html_erb__59132558_80053740'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/posts/9" for ::1 at 2020-04-07 00:59:17 +0300
+  
+ArgumentError (Invalid route name, already in use: 'post' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:7:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/posts/9" for ::1 at 2020-04-07 00:59:43 +0300
+  
+ArgumentError (Invalid route name, already in use: 'edit_post' 
+You may have defined two routes with the same name using the `:as` option, or you may be overriding a route already defined by a resource with the same naming. For the latter, you can restrict the routes created with `resources` as explained here: 
+http://guides.rubyonrails.org/routing.html#restricting-the-routes-created):
+  
+config/routes.rb:10:in `block in <top (required)>'
+config/routes.rb:1:in `<top (required)>'
+Started GET "/posts/9" for ::1 at 2020-04-07 01:00:03 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:43
+  Rendered posts/show.html.erb within layouts/application (521.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 11818ms (Views: 11780.6ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--76b7aa907b50eff3707a8ab0f52db939a2598b19/90181.jpg" for ::1 at 2020-04-07 01:00:16 +0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--76b7aa907b50eff3707a8ab0f52db939a2598b19", "filename"=>"90181"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (76.1ms) [0m[34mGenerated URL for file at key: gh3hzoyLN8HiknXunNbYtpio (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg
+Completed 302 Found in 84ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 01:00:16 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb", "filename"=>"90181"}
+Completed 200 OK in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-07 01:00:30 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 293ms (Views: 286.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/2" for ::1 at 2020-04-07 01:00:33 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  Rendered posts/show.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+    25:   <%= @post.genger %>
+    26: </p>
+    27: <div style='width:250px;height:350px'>
+    28: <%= link_to image_tag(@post.image, style:'width:100%') , posts_path%>
+    29: </div>
+    30: 
+    31: 
+  
+app/views/posts/show.html.erb:28:in `_app_views_posts_show_html_erb__59132558_126319560'
+Started GET "/posts/9" for ::1 at 2020-04-07 01:00:44 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:43
+  Rendered posts/show.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 233ms (Views: 226.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 01:00:45 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb", "filename"=>"90181"}
+Completed 304 Not Modified in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-07 01:00:54 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 202ms (Views: 196.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/9/edit" for ::1 at 2020-04-07 01:00:57 +0300
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/_form.html.erb (101.5ms)
+  Rendered posts/edit.html.erb within layouts/application (146.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 383ms (Views: 377.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/9" for ::1 at 2020-04-07 01:01:01 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:43
+  Rendered posts/show.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 205ms (Views: 197.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 01:01:02 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb", "filename"=>"90181"}
+Completed 304 Not Modified in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2020-04-07 01:01:08 +0300
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (5.2ms)
+  Rendered posts/new.html.erb within layouts/application (9.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 215ms (Views: 209.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for ::1 at 2020-04-07 01:01:13 +0300
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zH3WNXA6mCvix6lL4JAXMw34hEhbEkYd0WACRSGTzbbuhNbGlmBNFLg+7UNJkDZhC/UcUstFL/XSSSxYRtSwLA==", "post"=>{"name"=>"", "description"=>"", "ingredans"=>"", "price"=>"", "genger"=>""}, "commit"=>"Create Post"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:25
+  [1m[36mPost Create (2.3ms)[0m  [1m[32mINSERT INTO "posts" ("name", "description", "ingredans", "genger", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["description", ""], ["ingredans", ""], ["genger", ""], ["created_at", "2020-04-06 22:01:13.706183"], ["updated_at", "2020-04-06 22:01:13.706183"]]
+  ↳ app/controllers/posts_controller.rb:25
+  [1m[35m (42.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:25
+Redirected to http://localhost:3000/posts/10
+Completed 302 Found in 127ms (ActiveRecord: 44.7ms)
+
+
+Started GET "/posts/10" for ::1 at 2020-04-07 01:01:13 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  Rendered posts/show.html.erb within layouts/application (10.6ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+    25:   <%= @post.genger %>
+    26: </p>
+    27: <div style='width:250px;height:350px'>
+    28: <%= link_to image_tag(@post.image, style:'width:100%') , posts_path%>
+    29: </div>
+    30: 
+    31: 
+  
+app/views/posts/show.html.erb:28:in `_app_views_posts_show_html_erb__59132558_144736520'
+Started GET "/posts" for ::1 at 2020-04-07 01:01:29 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 231ms (Views: 226.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/10" for ::1 at 2020-04-07 01:01:32 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  Rendered posts/show.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+    25:   <%= @post.genger %>
+    26: </p>
+    27: <div style='width:250px;height:350px'>
+    28: <%= link_to image_tag(@post.image, style:'width:100%') , posts_path%>
+    29: </div>
+    30: 
+    31: 
+  
+app/views/posts/show.html.erb:28:in `_app_views_posts_show_html_erb__59132558_141443160'
+Started GET "/posts/10" for ::1 at 2020-04-07 01:01:39 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  Rendered posts/show.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+    25:   <%= @post.genger %>
+    26: </p>
+    27: <div style='width:250px;height:350px'>
+    28: <%= link_to image_tag(@post.image, style:'width:100%') , posts_path%>
+    29: </div>
+    30: 
+    31: 
+  
+app/views/posts/show.html.erb:28:in `_app_views_posts_show_html_erb__59132558_127268780'
+Started GET "/posts" for ::1 at 2020-04-07 01:01:50 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 224ms (Views: 219.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/9" for ::1 at 2020-04-07 01:01:56 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:43
+  Rendered posts/show.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 239ms (Views: 232.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 01:01:56 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb", "filename"=>"90181"}
+Completed 304 Not Modified in 22ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/posts/9/comments" for ::1 at 2020-04-07 01:02:09 +0300
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TAB70Dib62+GS/jOmIzuzBtAO+MTv3sPVSBL68DD1x1u+Xsj3sE+UNyyvMYxjM+eHU2j+YPoEudWCWX2p4Sqhw==", "comment"=>{"body"=>"hi ples work"}, "commit"=>"Create Comment", "post_id"=>"9"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:8
+  [1m[36mComment Create (48.7ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "hi ples work"], ["post_id", 9], ["created_at", "2020-04-06 22:02:09.241862"], ["updated_at", "2020-04-06 22:02:09.241862"]]
+  ↳ app/controllers/comments_controller.rb:8
+  [1m[35m (795.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:8
+Redirected to http://localhost:3000/posts/9
+Completed 302 Found in 1035ms (ActiveRecord: 844.3ms)
+
+
+Started GET "/posts/9" for ::1 at 2020-04-07 01:02:10 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:43
+  Rendered posts/show.html.erb within layouts/application (12.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 284ms (Views: 275.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 01:02:10 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb", "filename"=>"90181"}
+Completed 304 Not Modified in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-07 01:02:32 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 236ms (Views: 230.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/10" for ::1 at 2020-04-07 01:02:55 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  Rendered posts/show.html.erb within layouts/application (10.2ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (Can't resolve image into URL: to_model delegated to attachment, but attachment is nil):
+    25:   <%= @post.genger %>
+    26: </p>
+    27: <div style='width:250px;height:350px'>
+    28: <%= link_to image_tag(@post.image, style:'width:100%') , posts_path%>
+    29: </div>
+    30: 
+    31: 
+  
+app/views/posts/show.html.erb:28:in `_app_views_posts_show_html_erb__59132558_133017460'
+Started GET "/posts/9" for ::1 at 2020-04-07 01:03:00 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:43
+  Rendered posts/show.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 230ms (Views: 223.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 01:03:01 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb", "filename"=>"90181"}
+Completed 304 Not Modified in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-07 01:03:16 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 187ms (Views: 182.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/9" for ::1 at 2020-04-07 01:03:19 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:43
+  Rendered posts/show.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 231ms (Views: 225.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 01:03:19 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjowNToxNi4xNDJaIiwicHVyIjoiYmxvYl9rZXkifX0=--9bc3968eb3b9160a8af2292ef2dd5103a9ed4deb", "filename"=>"90181"}
+Completed 304 Not Modified in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/9" for ::1 at 2020-04-07 01:05:47 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:43
+  Rendered posts/show.html.erb within layouts/application (10.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 229ms (Views: 221.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--76b7aa907b50eff3707a8ab0f52db939a2598b19/90181.jpg" for ::1 at 2020-04-07 01:05:47 +0300
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--76b7aa907b50eff3707a8ab0f52db939a2598b19", "filename"=>"90181"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (84.2ms) [0m[34mGenerated URL for file at key: gh3hzoyLN8HiknXunNbYtpio (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjoxMDo0Ny43NjFaIiwicHVyIjoiYmxvYl9rZXkifX0=--9f1c634ffad44416240f465392f209d4c89f866b/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjoxMDo0Ny43NjFaIiwicHVyIjoiYmxvYl9rZXkifX0=--9f1c634ffad44416240f465392f209d4c89f866b/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg
+Completed 302 Found in 87ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjoxMDo0Ny43NjFaIiwicHVyIjoiYmxvYl9rZXkifX0=--9f1c634ffad44416240f465392f209d4c89f866b/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 01:05:47 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjoxMDo0Ny43NjFaIiwicHVyIjoiYmxvYl9rZXkifX0=--9f1c634ffad44416240f465392f209d4c89f866b", "filename"=>"90181"}
+Completed 200 OK in 23ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/posts/9/comments" for ::1 at 2020-04-07 01:06:00 +0300
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wbj4f3fzh7hj04/0QOoNNp0VuD0XvEiFWt4j8w5UprF7QfiMkalShzkqy/zp6ixkmxggJ4frIW1Z9w3uaRPbKw==", "comment"=>{"body"=>"dsdsad"}, "commit"=>"Create Comment", "post_id"=>"9"}
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:8
+  [1m[36mComment Create (1.4ms)[0m  [1m[32mINSERT INTO "comments" ("body", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["body", "dsdsad"], ["post_id", 9], ["created_at", "2020-04-06 22:06:00.641523"], ["updated_at", "2020-04-06 22:06:00.641523"]]
+  ↳ app/controllers/comments_controller.rb:8
+  [1m[35m (459.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:8
+Redirected to http://localhost:3000/posts/9
+Completed 302 Found in 523ms (ActiveRecord: 461.3ms)
+
+
+Started GET "/posts/9" for ::1 at 2020-04-07 01:06:01 +0300
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:57
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Post"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/show.html.erb:28
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  ↳ app/views/posts/show.html.erb:43
+  Rendered posts/show.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 233ms (Views: 225.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjoxMDo0Ny43NjFaIiwicHVyIjoiYmxvYl9rZXkifX0=--9f1c634ffad44416240f465392f209d4c89f866b/90181.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%2290181.jpg%22%3B+filename%2A%3DUTF-8%27%2790181.jpg" for ::1 at 2020-04-07 01:06:01 +0300
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"90181.jpg\"; filename*=UTF-8''90181.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRaMmd6YUhwdmVVeE9PRWhwYTI1WWRXNU9ZbGwwY0dsdkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTlhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlPVEF4T0RFdWFuQm5JanNnWm1sc1pXNWhiV1VxUFZWVVJpMDRKeWM1TURFNE1TNXFjR2NHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMC0wNC0wNlQyMjoxMDo0Ny43NjFaIiwicHVyIjoiYmxvYl9rZXkifX0=--9f1c634ffad44416240f465392f209d4c89f866b", "filename"=>"90181"}
+Completed 304 Not Modified in 32ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for ::1 at 2020-04-07 01:07:44 +0300
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:18
+  Rendered posts/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:22
+Completed 200 OK in 219ms (Views: 212.8ms | ActiveRecord: 0.9ms)
+
+
