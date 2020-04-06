@@ -1,2 +1,0 @@
-class Poste < ApplicationRecord
-end
