@@ -1,3 +1,3 @@
 class Poste < ApplicationRecord
-    has_many_attached :img
+    has_one_attached :image
 end
