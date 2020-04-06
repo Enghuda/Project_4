@@ -7,11 +7,9 @@ Name :
 Description :
 <%= @poste.description%>
 </div>
-<div style='width:250px;height:350px'>
-<%= link_to image_tag(@poste.image, style:'width:100%') , postes_path%>
-</div>
+
 <div>
-<%= link_to 'Back' , poste_path%>
+<%= link_to 'Back' , postes_path%>
 <%= link_to 'Edit' , poste_edit_path%>
 <%= link_to 'Delete' ,poste_path , method: :delete, data: {confirm: 'Are You Sure ? '}%>
 <div>
