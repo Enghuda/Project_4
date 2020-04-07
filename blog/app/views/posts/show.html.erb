@@ -1,53 +1,52 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
 
-<p>
-  <strong>Name:</strong>
-  <%= @post.name %>
-</p>
+	<div class="col-md-4">
 
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-
-<p>
-  <strong>Ingredans:</strong>
-  <%= @post.ingredans %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @post.price %> SR
-</p>
-
-<p>
-  <strong>Genger:</strong>
-  <%= @post.genger %>
-</p>
 <div style='width:250px;height:350px'>
 <%= link_to image_tag(@post.image, style:'width:100%') , posts_path%>
 </div>
 
+</div>
+
+	<div class="col-md-8">
+
+		<div class="post-info">
+
+<h2 class="post-name"><%= @post.name %></h2>
+
+			<p class="post">  <strong>Description: </strong><%=  @post.description%></p>
+  			<p class="post">  <strong>Ingredans: </strong><%=  @post.ingredans%></p>
+  			<p class="post">  <strong>Price: </strong><%=  @post.price%> SAR</p>
+  			<p class="post-genger">  <strong>Genger: </strong><%=  @post.genger%></p>
+  <div class="links btn-group">
+  <%= link_to 'Edit', edit_post_path(@post) ,class: "btn btn-custom"%> 
+<%= link_to 'Back', posts_path ,class: "btn btn-custom"%>
+
+</div>
+
+		</div>
+	</div>
+</div>
 
 
-
-<div>
-  <div> 
-<table>
+<div class="panel panel-default">
+  <div class="panel-body"> 
+<table class="table">
   <thead>
     <tr>
       <th>Comments</th>
     </tr>
   </thead>
  <tbody>
-    <% @post.comments.each do |comment| %>
+  <% @post.comments.each do |comment| %>
       <tr>
         <td>
     
           <%= comment.body %>
      
         </td>
-       </td>
+      
       </tr>
     <% end %>
   </tbody>
@@ -56,33 +55,19 @@
 </div>
 </div>
 </div>
-
-
-<div>
-  <div>Add Comment</div>
-  <div> 
+<div class="panel panel-default">
+  <div class="panel-heading">Add comment</div>
+  <div class="panel-body"> 
 
 <%= form_for([@post,@post.comments.build]) do |f| %>
- 
+ <div class="field">
+    <%= f.text_area :body,:class => 'form-control' %>
+    </div>
+  <div class="actions">
 
-  <div>
- 
-    <%= f.text_area :body %>
-  </div>
-
-
-  <div>
-    <%= f.submit %>
+    <%= f.submit%>
   </div>
 <% end %>
 </div>
-</div>
-
-
-
-  
-  
-  
-  
-  <%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+</div>  
+	
