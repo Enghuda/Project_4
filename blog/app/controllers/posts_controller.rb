@@ -26,9 +26,6 @@ class PostsController < ApplicationController
       end
     end
   end
-
-  # PATCH/PUT /posts/1
-  # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
       if @post.update(post_params)
@@ -38,9 +35,6 @@ class PostsController < ApplicationController
       end
     end
   end
-
-  # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post.destroy
     respond_to do |format|

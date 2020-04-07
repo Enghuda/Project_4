@@ -13,16 +13,15 @@
 
 		<div class="post-info">
 
-<h2 class="post-name"><%= @post.name %></h2>
-
-			<p class="post">  <strong>Description: </strong><%=  @post.description%></p>
+       <h2 class="post-name"><%= @post.name %></h2>
+			  <p class="post">  <strong>Description: </strong><%=  @post.description%></p>
   			<p class="post">  <strong>Ingredans: </strong><%=  @post.ingredans%></p>
   			<p class="post">  <strong>Price: </strong><%=  @post.price%> SAR</p>
   			<p class="post-genger">  <strong>Genger: </strong><%=  @post.genger%></p>
   <div class="links btn-group">
   <%= link_to 'Edit', edit_post_path(@post) ,class: "btn btn-custom"%> 
 <%= link_to 'Back', posts_path ,class: "btn btn-custom"%>
-
+<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-custom" %>
 </div>
 
 		</div>
@@ -44,6 +43,9 @@
         <td>
     
           <%= comment.body %>
+                   by <%= comment.user.email %>
+
+<%= link_to 'Delete Comment',[comment.post,comment], method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-custom" %>
      
         </td>
       
@@ -62,6 +64,8 @@
 <%= form_for([@post,@post.comments.build]) do |f| %>
  <div class="field">
     <%= f.text_area :body,:class => 'form-control' %>
+        <%= f.hidden_field :user_id, value: current_user.id , :class => 'form-control' %>
+
     </div>
   <div class="actions">
 
