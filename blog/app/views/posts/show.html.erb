@@ -1,36 +1,34 @@
-<p id="notice"><%= notice %></p>
 <div class="row">
 
 	<div class="col-md-4">
-
-<div style='width:250px;height:350px'>
-<%= link_to image_tag(@post.image, style:'width:100%') , posts_path%>
-</div>
-
-</div>
+      
+      <%= link_to image_tag(@post.image, class: "images-show" ) , posts_path%>
+    </div>
+  
 
 	<div class="col-md-8">
 
-		<div class="post-info">
+	<div class="post-info">
 
-       <h2 class="post-name"><%= @post.name %></h2>
+        <h2 class="post-name"><%= @post.name %></h2>
 			  <p class="post">  <strong>Description: </strong><%=  @post.description%></p>
   			<p class="post">  <strong>Ingredans: </strong><%=  @post.ingredans%></p>
   			<p class="post">  <strong>Price: </strong><%=  @post.price%> SAR</p>
   			<p class="post-genger">  <strong>Genger: </strong><%=  @post.genger%></p>
-  <div class="links btn-group">
-  <%= link_to 'Edit', edit_post_path(@post) ,class: "btn btn-custom"%> 
-<%= link_to 'Back', posts_path ,class: "btn btn-custom"%>
-<%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-custom" %>
-</div>
 
-		</div>
-	</div>
-</div>
+
+  <div class="links btn-group">
+        <%= link_to 'Edit', edit_post_path(@post) ,class: "btn btn-primary"%> 
+        <%= link_to 'Back', posts_path ,class: "btn btn-primary"%>
+        <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-primary" %>
+  </div>
+     </div>
+         </div>
+            
 
 
 <div class="panel panel-default">
-  <div class="panel-body"> 
+<div class="panel-body"> 
 <table class="table">
   <thead>
     <tr>
@@ -44,20 +42,20 @@
     
           <%= comment.body %>
                    by <%= comment.user.email %>
+<% if current_user && current_user == comment.user %>
 
-<%= link_to 'Delete Comment',[comment.post,comment], method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-custom" %>
+<%= link_to 'Delete Comment',[comment.post,comment], method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-primary" %>
      
         </td>
-      
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
-     </div>
 </div>
 </div>
-</div>
-<div class="panel panel-default">
+
+  <div class="panel panel-default">
   <div class="panel-heading">Add comment</div>
   <div class="panel-body"> 
 
@@ -67,11 +65,10 @@
         <%= f.hidden_field :user_id, value: current_user.id , :class => 'form-control' %>
 
     </div>
-  <div class="actions">
-
-    <%= f.submit%>
+    <%= f.submit  :class=> 'btn btn-primary'%>
   </div>
 <% end %>
 </div>
 </div>  
-	
+	</div>  
+
