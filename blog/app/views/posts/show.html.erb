@@ -1,39 +1,37 @@
-<div class="row">
 
 	<div class="col-md-4">
       
       <%= link_to image_tag(@post.image, class: "images-show" ) , posts_path%>
-    </div>
+   </div>
   
-
 	<div class="col-md-8">
-
 	<div class="post-info">
-
         <h2 class="post-name"><%= @post.name %></h2>
 			  <p class="post">  <strong>Description: </strong><%=  @post.description%></p>
   			<p class="post">  <strong>Ingredans: </strong><%=  @post.ingredans%></p>
   			<p class="post">  <strong>Price: </strong><%=  @post.price%> SAR</p>
-  			<p class="post-genger">  <strong>Genger: </strong><%=  @post.genger%></p>
+  			<p class="post">  <strong>Genger: </strong><%=  @post.genger%></p>
 
-
-  <div class="links btn-group">
+ <% if current_user && current_user.admin?%>
         <%= link_to 'Edit', edit_post_path(@post) ,class: "btn btn-primary"%> 
-        <%= link_to 'Back', posts_path ,class: "btn btn-primary"%>
+        <%= link_to 'Back', posts_path ,class: "btn btn-primary"%> 
         <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-primary" %>
-  </div>
+  <% end %>
+
      </div>
          </div>
             
-
-
 <div class="panel panel-default">
 <div class="panel-body"> 
 <table class="table">
   <thead>
     <tr>
+        <tr>
+
       <th>Comments</th>
     </tr>
+        </tr>
+
   </thead>
  <tbody>
   <% @post.comments.each do |comment| %>

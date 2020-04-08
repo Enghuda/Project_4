@@ -6,7 +6,7 @@ class User < ApplicationRecord
          has_many :comments
 
          def admin?
-          admin
+          self.admin
            
          end
 end

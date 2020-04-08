@@ -29,7 +29,10 @@
           <ul class='nav navbar-nav '>
            <% if user_signed_in?%>
                <li> <%= link_to 'Posts' , posts_path%><li>
+               <% if current_user && current_user.admin?%>
               <li><%= link_to "New Post" , posts_new_path%><li>
+                        <% end %>
+
           <% end %>
           </ul>
           </div>
