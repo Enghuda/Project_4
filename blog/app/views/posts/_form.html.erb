@@ -1,0 +1,47 @@
+
+<%= form_with(model: post, local: true) do |form| %>
+  <div class="panel panel-default">
+  
+  <div class="panel-heading">New Post</div>
+  <div class="panel-body">
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name ,:class =>'form-control'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description,:class =>'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ingredans %>
+    <%= form.text_field :ingredans,:class =>'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price,:class =>'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :genger %>
+    <%= form.text_field :genger,:class =>'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image ,:class =>'form-control'%>
+  </div>
+  <div class="actions">
+  
+<%= link_to 'Show', @post ,class: "btn btn-primary"  %> 
+<%= link_to 'Back', posts_path ,class: "btn btn-primary"%> 
+    <%= form.submit :class=> 'btn btn-primary'%>
+  </div>
+
+<% end %>
+</div>
+</div> 
+</div>
