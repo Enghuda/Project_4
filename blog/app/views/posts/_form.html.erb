@@ -1,6 +1,7 @@
 
 <%= form_with(model: post, local: true) do |form| %>
   <div class="panel panel-default">
+  
   <div class="panel-heading">New Post</div>
   <div class="panel-body">
 
@@ -34,7 +35,10 @@
     <%= form.file_field :image ,:class =>'form-control'%>
   </div>
   <div class="actions">
-    <%= form.submit %>
+  
+<%= link_to 'Show', @post ,class: "btn btn-primary"  %> 
+<%= link_to 'Back', posts_path ,class: "btn btn-primary"%> 
+    <%= form.submit :class=> 'btn btn-primary'%>
   </div>
 
 <% end %>

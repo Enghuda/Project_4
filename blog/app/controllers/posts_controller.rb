@@ -1,13 +1,13 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only:[:show, :new,:edit, :destroy]
-  # GET /posts
-  # GET /posts.json
+  before_action :set_post, except: [:index, :new, :create]
+  before_action :authenticate_user!, only:[:new, :show]
+
   def index
     @posts = Post.all
   end
   def show
-  end
+ 
+    end
 
   def new
     @post = Post.new
@@ -17,23 +17,20 @@ class PostsController < ApplicationController
   end  
   def create
     @post = Post.new(post_params)
-
-    respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+       redirect_to @post, notice: 'Post was successfully created.' 
       else
-        format.html { render :new }
-      end
+        render :new
     end
   end
   def update
-    respond_to do |format|
+  
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+       redirect_to @post, notice: 'Post was successfully updated.' 
       else
-        format.html { render :edit }
+      render :edit 
       end
-    end
+    
   end
   def destroy
     @post.destroy
