@@ -12,6 +12,8 @@
   			<p class="post">  <strong>Price: </strong><%=  @post.price%> SAR</p>
   			<p class="post">  <strong>Genger: </strong><%=  @post.genger%></p>
 
+        <%= link_to 'Back', posts_path ,class: "btn btn-primary"%> 
+
  <% if current_user && current_user.admin?%>
         <%= link_to 'Edit', edit_post_path(@post) ,class: "btn btn-primary"%> 
         <%= link_to 'Back', posts_path ,class: "btn btn-primary"%> 
