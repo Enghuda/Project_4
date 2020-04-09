@@ -20,8 +20,8 @@
 * As an admin I can delete posts
 * As an admin I can add new posts
 ## Wire Frames :
-![Wire Frames](.\images\wir1.PNG)
-![Wire Frames](.\images\wir2.PNG)
+![Wire Frames](./images/wir1.PNG)
+![Wire Frames](./images/wir2.PNG)
 ## ER Diagram
 ![ERD](images\ERD.PNG)
 ## Technologies
