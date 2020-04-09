@@ -2,18 +2,29 @@
 <html>
   <head>
     <title>perfumes</title>
-    <%= csrf_meta_tags %>
+    <%= csrf_meta_tags  %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' ,'data-turbolink-track' => true%>
     <%= csrf_meta_tags%>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
   </head>
  <body>
-          <nav class="navbar navbar-default">
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
           <div class="container">
            <div class="navbar-header">
-            <%= link_to 'PerfumesHome ',root_path,class:'navbar-brand'%>
+            <%= link_to 'FRAGRANCE  ',root_path,class:'navbar-brand'%>
             </div>
 
           <ul class='nav navbar-nav navbar-right'>
@@ -27,17 +38,24 @@
           </ul>
 
           <ul class='nav navbar-nav '>
-               <% if current_user.admin?%>
+               <% if current_user && current_user.admin?%>
               <li><%= link_to "New Post" , posts_new_path%><li>
           <% end %>
           </ul>
           </div>
           </nav>
-            <p class="notice"><%= notice %></p>
+          <div class="messg">
+    <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+    </div>
   <div class="container">
 		<%= yield %>
 	</div>	
-
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright &copy; Alismail.huda@gmail.com</p>
+    </div>
+    <!-- /.container -->
+  </footer
 </body>
 </html>

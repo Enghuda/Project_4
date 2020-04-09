@@ -11,8 +11,8 @@
   			<p class="post">  <strong>Ingredans: </strong><%=  @post.ingredans%></p>
   			<p class="post">  <strong>Price: </strong><%=  @post.price%> SAR</p>
   			<p class="post">  <strong>Genger: </strong><%=  @post.genger%></p>
-
         <%= link_to 'Back', posts_path ,class: "btn btn-primary"%> 
+
 
  <% if current_user && current_user.admin?%>
         <%= link_to 'Edit', edit_post_path(@post) ,class: "btn btn-primary"%> 
@@ -41,7 +41,7 @@
         <td>
     
           <%= comment.body %>
-                   by <%= comment.user.email %>
+                   by <%= comment.user.email  %>
 <% if current_user && current_user == comment.user %>
 
 <%= link_to 'Delete Comment',[comment.post,comment], method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-primary" %>
