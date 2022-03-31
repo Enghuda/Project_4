@@ -7,7 +7,7 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 
 gem 'paperclip', '~> 6.1'
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
